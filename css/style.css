@@ -266,7 +266,6 @@ ul {
   width: 15vw;
 }
 
-
 a .link {text-align: center;}
 
 ul li:last-child {
@@ -289,32 +288,12 @@ ul li:last-child {
   background-color: var(--color-4);
 }
 
-/* .color-swatch-5 {
-  background-color: var(--color-5);
-} */
-
 .textures li {
   height: 30vw;
   width: 40%;
   margin-right: 5vw;
 }
 
-/* .texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
-}
-
-.texture-swatch-2 {
-  background: url(../img/subtle_grunge.png) top left repeat;
-}
-
-.texture-swatch-1 {
-  background: url(../img/pw_maze_white.png) top left repeat;
-}
-
-.texture-swatch-3 {
-  background: url(../img/white_paperboard.png) top left repeat;
-}
- */
 .images ul {
   flex-direction: column;
   text-align: center;
