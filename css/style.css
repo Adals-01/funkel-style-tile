@@ -1,0 +1,439 @@
+
+
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Karla:wght@300;700&display=swap');
+/*
+font-family: 'Cormorant Garamond', serif;
+font-family: 'Karla', sans-serif;
+*/
+
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: White;
+  --link-color: rgb(36, 36, 36);
+  --link-hover-color: black;
+  --color-1: black;
+  --color-2: #f7b3a2;
+  --color-3: #13803a;
+  --color-4: black;
+  --color-5: white;
+  --primary-font:'Karla', sans-serif;
+  --secondary-font:'Cormorant Garamond', serif;
+  --font-style: normal;
+  --text-transform: lowercase;
+  --main-text-color: #dar;
+  --white-space: 1rem;
+}
+
+header {
+  display: grid;
+  text-align: right;
+  padding-top: 1.5em;
+}
+
+li a {
+  list-style-type: none;
+  display: block;
+}
+
+nav a {
+  padding: 1em;
+  text-align: left;
+  display: inline-block;
+  font-Size: 1.2em;
+}
+ul {padding: 0vw;}
+
+nav {display: block}
+
+.logo {
+  display: block;
+  max-width: 18em;
+  float: right;
+}
+
+
+/* burger menu animation */
+#menuToggle
+{ position: absolute;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: underline;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#menuToggle input
+{ width: 40px;
+  height: 34px;
+  position: absolute;
+  display: block;
+  top: -10px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+
+/*
+ * Just a quick hamburger
+ */
+
+ /*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+#menuToggle span
+{
+  display: block;
+  width: 34px;
+  height: 3px;
+  margin-bottom: 8px;
+  position: relative;
+  background: black;
+  z-index: 1;
+  /* transform-origin: 4px 0px; */
+  
+  transition: transform 0.3s ease-out,
+              background 0.3s ease-out,
+              opacity 0.3s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: bottom left;
+}
+
+#menuToggle span:nth-last-child(2)
+{transform-origin: bottom left;
+ transform-origin: center
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+opacity: 1;
+ transform-origin: center;
+ transform:translate(0%, 350%) rotate(45deg) ;
+ background: black;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) /* scale(0.2, 0.2); */
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{ /* transform-origin: bottom left; */
+  transform:translate(0%, -350%) rotate(-45deg) /* translate(0, -1px) */;
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{ display: grid;
+  text-align: left;
+  position: absolute;
+  width: 100vw;
+  margin: -4em 0vw 0vw -4em;
+  padding:20vw;
+  background: #ededed;
+  list-style-type: none;
+  --webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.4s ease-in-out;
+}
+
+#menu li
+{ padding: 10px 0;
+  font-size: 1em;
+  display: inline;
+
+}
+
+section {margin: 1em 0em;}
+
+/*Buttons animation*/
+button {
+  transition: all 3s;
+}
+li a {transition: all 3s;
+}
+button:hover {
+  background-color: var(--color-1);
+  color: var(--bg-color);
+  transform: scale(1.03);
+}
+
+button:active {
+  background-color: var(--bg-color);
+  color: var(--color-1);
+
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+html {
+  font-size: 100%;
+  font-family: var(--primary-font);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+header,
+main,
+footer {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: calc( var(--white-space));
+}
+
+.full-width {
+  background: var(--bg-color);
+  color: white;
+  width: 100%;
+}
+
+.header-wrapper h2 {color:var(--link-color);
+  font-size: 1em;
+  color: black;
+  margin: var(--white-space) 0;
+}
+
+.header-wrapper h3 {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.header-wrapper h4 {
+  font-size: 0.8rem;
+}
+
+main {
+  padding: 3em;
+}
+
+section {
+  margin-bottom: calc(4 * var(--white-space));
+}
+
+.section-heading {
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #777;
+  margin: 0.5rem 0;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.swatches li {
+  margin-right: 5vw;
+  height: 15vw;
+  width: 15vw;
+}
+
+
+a .link {text-align: center;}
+
+ul li:last-child {
+  margin-right: 0;
+}
+
+.color-swatch-1 {
+  background-color: var(--color-1);
+}
+
+.color-swatch-2 {
+  background-color: var(--color-2);
+}
+
+.color-swatch-3 {
+  background-color: var(--color-3);
+}
+
+.color-swatch-4 {
+  background-color: var(--color-4);
+}
+
+/* .color-swatch-5 {
+  background-color: var(--color-5);
+} */
+
+.textures li {
+  height: 30vw;
+  width: 40%;
+  margin-right: 5vw;
+}
+
+/* .texture-swatch-1 {
+  background: url(../img/pw_maze_white.png) top left repeat;
+}
+
+.texture-swatch-2 {
+  background: url(../img/subtle_grunge.png) top left repeat;
+}
+
+.texture-swatch-1 {
+  background: url(../img/pw_maze_white.png) top left repeat;
+}
+
+.texture-swatch-3 {
+  background: url(../img/white_paperboard.png) top left repeat;
+}
+ */
+.images ul {
+  flex-direction: column;
+  text-align: center;
+}
+
+.images li {
+  display: block;
+  /*margin-right: 5vw;*/
+  margin-bottom: 1rem;
+}
+
+/*button styling*/
+
+button {
+  border: 2px solid var(--color-1);
+  padding: 1em 1.2em;
+  border-radius: 1.5em;
+  text-align: center;
+  text-decoration: none;
+  font: 1.25em/1 var(--primary-font);
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  margin: 1em 1em 1em 0em;
+  
+}
+
+button:focus,
+button:active,
+button:focus-within {
+  outline: 0;
+}
+
+.typography-main {
+  color: var(--main-text-color);
+}
+
+h1 {
+  font-family: var(--primary-font);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.6em;
+}
+
+/*Intro text/quote*/
+h2 {
+  font-family: var(--secondary-font);
+  font-weight: lighter;
+  font-size: 1.2em;
+}
+
+/*Paragraph*/
+p {
+  font-family: var(--primary-font);
+  font-weight: 300;
+  font-size: 1em;
+  padding-bottom: 1.5em;
+}
+
+.font-details-p {margin-top: -1.5em;}
+
+p .font-name {font-size: 0.6em; color: dimgray;}
+
+p .font-color {margin-top: 0.4em;font-size: 0.6em; color: dimgray;}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+a {
+  font-family: var(--primary-font);
+  color: var(--color-1);
+  transition: all 0.2s;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+a:hover {font-style: italic;
+ }
+
+.adjectives ul {
+  font-size: 2rem;
+  opacity: 0.5;
+}
+
+.adjectives ul {
+  flex-direction: column;
+}
+
+footer {
+  font-style: italic;
+}
+
+@media (min-width: 800px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+  }
+
+  .swatches li {
+    margin-right: 3%;
+    height: 10vw;
+    width: 20%;
+  }
+
+  .textures li {
+    height: 15vw;
+  }
+}
+
+@media (min-width: 900px) {
+  .adjectives ul {
+    flex-direction: row;
+  }
+}
