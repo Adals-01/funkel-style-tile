@@ -80,19 +80,11 @@ nav {display: block}
   top: -10px;
   left: -5px;
   cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  opacity: 0; 
+  z-index: 2; 
   -webkit-touch-callout: none;
 }
 
-
-/*
- * Just a quick hamburger
- */
-
- /*
- * And let's slide it in from the left
- */
 #menuToggle input:checked ~ ul
 {
   transform: none;
@@ -106,7 +98,7 @@ nav {display: block}
   position: relative;
   background: black;
   z-index: 1;
-  /* transform-origin: 4px 0px; */
+
   
   transition: transform 0.3s ease-out,
               background 0.3s ease-out,
@@ -123,10 +115,7 @@ nav {display: block}
  transform-origin: center
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
+
 #menuToggle input:checked ~ span
 {
 opacity: 1;
@@ -135,27 +124,18 @@ opacity: 1;
  background: black;
 }
 
-/*
- * But let's hide the middle one.
- */
 #menuToggle input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
-  transform: rotate(0deg) /* scale(0.2, 0.2); */
+  transform: rotate(0deg) 
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
+
 #menuToggle input:checked ~ span:nth-last-child(2)
-{ /* transform-origin: bottom left; */
-  transform:translate(0%, -350%) rotate(-45deg) /* translate(0, -1px) */;
+{
+  transform:translate(0%, -350%) rotate(-45deg);
 }
 
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
 #menu
 { display: grid;
   text-align: left;
@@ -219,27 +199,6 @@ footer {
   padding: calc( var(--white-space));
 }
 
-.full-width {
-  background: var(--bg-color);
-  color: white;
-  width: 100%;
-}
-
-.header-wrapper h2 {color:var(--link-color);
-  font-size: 1em;
-  color: black;
-  margin: var(--white-space) 0;
-}
-
-.header-wrapper h3 {
-  font-size: 1.2rem;
-  font-style: italic;
-}
-
-.header-wrapper h4 {
-  font-size: 0.8rem;
-}
-
 main {
   padding: 3em;
 }
@@ -288,11 +247,6 @@ ul li:last-child {
   background-color: var(--color-4);
 }
 
-.textures li {
-  height: 30vw;
-  width: 40%;
-  margin-right: 5vw;
-}
 
 .images ul {
   flex-direction: column;
@@ -343,7 +297,7 @@ h1 {
 /*Intro text/quote*/
 h2 {
   font-family: var(--secondary-font);
-  font-weight: lighter;
+  font-weight:300;
   font-size: 1.2em;
 }
 
@@ -372,8 +326,18 @@ a {
   text-underline-position: under;
 }
 
-a:hover {font-style: italic;
- }
+a:hover {font-style: italic;}
+
+.font-details-color {font-size: 0.6em; color: var(--bg-color);}
+
+/* NO NEED TO COPY CSS BELOW <3 */
+
+.font-name {font-size: 0.6em; color: dimgray;}
+
+.font-color {font-size: 0.6em; color: dimgray;}
+@media (min-width: 800px) {
+  #menuToggle {display: none;}
+
 
 @media (min-width: 800px) {
   main {
@@ -399,9 +363,3 @@ a:hover {font-style: italic;
   }
 }
 
-
-/* no need to copy css below <3 */
-
-.font-name {font-size: 0.6em; color: dimgray;}
-
-.font-color {font-size: 0.6em; color: dimgray;}
