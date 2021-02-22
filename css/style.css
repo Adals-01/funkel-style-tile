@@ -376,11 +376,6 @@ p {
   padding-bottom: 1.5em;
 }
 
-.font-details-p {margin-top: -1.5em;}
-
-p .font-name {font-size: 0.6em; color: dimgray;}
-
-p .font-color {margin-top: 0.4em;font-size: 0.6em; color: dimgray;}
 
 strong {
   font-weight: bold;
@@ -400,19 +395,6 @@ a {
 
 a:hover {font-style: italic;
  }
-
-.adjectives ul {
-  font-size: 2rem;
-  opacity: 0.5;
-}
-
-.adjectives ul {
-  flex-direction: column;
-}
-
-footer {
-  font-style: italic;
-}
 
 @media (min-width: 800px) {
   main {
@@ -437,3 +419,10 @@ footer {
     flex-direction: row;
   }
 }
+
+
+/* no need to copy css below <3 */
+
+.font-name {font-size: 0.6em; color: dimgray;}
+
+.font-color {font-size: 0.6em; color: dimgray;}
